@@ -1,0 +1,53 @@
+
+
+Proximas actividades:
+
+LISTO ---- Editar la pagina de creacion de nuevos proyectos
+LISTO ---- Limitar esa pagina solo a quienes esten loggeados
+LISTO ---- Hacer el footer de todas las paginas
+LISTO ---- Agregar a la pagina principal la seccion de trabaje con nosotros
+LISTO ---- Crear la pagina de lista de ofertas de empleo
+LISTO ---- Elaborar el formulario para contacto
+LISTO ---- Cuando se da clic en aplicar debe enviar al formulario pero ya diligenciado el asunto
+LISTO ---- Crear la pagina para crear una nueva oferta de empleado para usuarios loggeados
+
+LISTO ---- Agregar al ckeditor la opcion de cambiarle el color al texto
+LISTO ---- Agregar los proyectos principales a la pagina de inicio
+LISTO ---- Elaborar la pagina de servicios, crear un modelo para poder modificar los diferentes servicios e incluso agregar más
+LISTO ---- Al darle clic a los iconos iniciales de la pagina de servicio lo lleva a uno a la parte de la pagina del servicio
+9. Agregar los servicios principales a la pagina de inicio
+10. Elaborar la pagina de contacto con un mapa de ubicación de la oficina principal y el formulario de contacto a la vista
+11. Agregar el modelo de galeria de imagenes donde se van a subir todas las fotos del proyecto
+11. Hacer la pagina de filosofia organizacional y poner enlaces con imagenes a esa pagina desde la pagina principal
+12. Imagenes de las certificaciones ISO que tiene Lyansa al final de la pagina
+13. Subir el proyecto a github
+14. Subir el proyecto al VPS de digitalocean
+15. Averiguar sobre traslado de dominios para la pagina web
+
+16. Que el usuario loggeado pueda editar las publicaciones tanto de proyectos como de empleos
+16. Elaborar los modelos para crear propios formularios en la pagina
+
+
+Frontend:
+
+LISTO ---- Agregar iconos para el login y registro
+1. En el menu de opciones, la opcion actual debe aparecer (brillar) como activa
+3. El boton de login y registro en vista para el celular se ve junto
+4. Al filtrar por categorias, no se ve igual que en la pagina principal de proyectos
+6. Un enlace y pequeña muestra de los principales proyectos en la pagina principal
+7. Enlaces de filosofia organizacional. Crear la pagina de filosofia organizacional y ver como hacer enlaces a especificos puntos de una URL
+8. Mejorar el footer, incluir un "volver arriba", esta separado con un margin especifico y deja un hueco en blanco con el body
+9. Mejorar la visualizacion de los errores al diligenciar formularios
+10. Icono de lyansa
+
+Backend:
+LISTO ---- Eliminar el modelo de Pagina ya que no es necesario
+LISTO ---- Modelo de ofertas de empleo
+LISTO ---- En la pagina de proyectos, para los usuarios que han ingresado les aparezca un boton de crear nuevo proyecto.
+LISTO ---- Elaborar el formulario para enviar un trabaje con nosostros
+LISTO ---- Configurar un envio de correo electronico para los formularios de trabaje con nosotros
+4. Manejar los permisos de ingreso en cada URL
+5. En cada uno de los proyectos un boton para editar el contenido
+
+8. Al realizar el login y registro de forma incorrecta deberia mostrar un mensaje avisando que la contraseña o usuario no coinciden
+9. Agregar el validators para password1 y password2 en el registro de usuarios

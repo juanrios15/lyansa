@@ -1,0 +1,69 @@
+{% load static %}
+
+
+<div class="container-fluid bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 text-white">
+                <div class="row">
+                    {% if not user.username %}
+                    <div class="col-12"> 
+                    <a class="nombreenlace2 " href="{% url 'home:login' %}"><i class="fas fa-user-alt fa-sm"></i> &nbsp;Login </a>
+                          <a class="nombreenlace2 px-4" href="{% url 'home:registro' %}"> <i class="fas fa-user-plus fa-sm"></i>  &nbsp;Registro</a>  
+                      </div>
+      
+                    {% endif %}
+
+                    {% if user.username %}
+                    <div class="col-12"> 
+                    Bienvenido {{user.username}} |
+                    <a class="nombreenlace2" href="{% url 'home:logout' %}"> &nbsp;<i class="fas fa-user-alt-slash fa-sm"></i> Cerrar sesión</a>
+                    </div>
+
+                    {% endif %}
+                    
+                </div>
+                
+             </div>
+            <div class="col-md-4 offset-md-4 text-white text-end">  <i class="fas fa-mobile-alt fa-sm" style="padding-right: 10px;"></i>+57 320 857 5134</div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #2e5596;">
+    <div class="container">
+        <a href="/"><img src="{% static 'img/logotipo.png' %}" class="d-block" style="width: 100px" ></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home:inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home:servicios' %}">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'proyecto_app:lista' %}">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Contacto</a>
+                </li>
+               
+
+
+            </ul>
+        </div>
+
+
+
+
+    </div>
+
+</nav>

@@ -1,0 +1,32 @@
+
+
+{% for pr in proyectos %}
+             <div class="container" style="margin-top: 20px; padding-bottom: 20px; border-bottom: 1px solid #aaa">
+                  {% if pr.imagen != 'null'  and pr.imagen.url|length >= 1  %}
+                      <div style="float: left;">
+                          <img src="{{pr.imagen.url}}" style="width: 340px; height:250px; margin-right: 30px;"/>
+                        </div>
+                  {% endif %}
+            
+                    <div id="cajalista">
+                
+                          <p><a class="nombreenlace" href="{% url 'proyecto_app:detalle' pr.id %}">{{pr.nombre}}</a></p>
+                          <span class="date">{{pr.created_at}} | {{pr.user}}</span>
+                          
+                          <p>
+                            {% for categoria in pr.Categories.all %}
+                            <a href="{% url 'proyecto_app:listacategoria' categoria.nombre %}" style="color: #555555;">{{categoria}}</a>
+                            {% endfor %}
+                          </p>
+                         
+                          <p class="resumen">
+                            {{pr.resumen}}
+                            
+                          </p>
+                          <a type="button" class="btn btn-dark" href="{% url 'proyecto_app:detalle' pr.id %}"> Detalle</a>
+                          
+            
+                    </div>
+              </div>
+  
+    {% endfor %}

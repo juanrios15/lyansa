@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %} Formulario de contacto {% endblock title %}
+
+  {% block content %}
+
+  {% include 'header.html' %}
+
+<div class="container">
+
+  <div class="login container col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8  mt-3">
+    <div style="background-color: #2e5596; margin-bottom: 10px; color: white; padding: 15px;">Formulario de contacto
+    </div>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-10">
+
+        <form class="row g-3" action="" method="post" enctype="multipart/form-data"> {%csrf_token%}
+            
+            {{form.as_p}}
+
+          <button type="submit" class="btn btn-outline-primary">Enviar formulario</button>
+
+        </form>
+      </div>
+    </div>
+    <br>
+  </div>
+
+</div>
+
+  
+
+{% endblock content %}
