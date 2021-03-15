@@ -28,13 +28,16 @@ LISTO ---- Crear el navbar del footer con los 4 enlaces a Empleo, Info. Legal, f
 LISTO ---- Falta agregar info legal y politicas de uso
 LISTO ---- Que el usuario loggeado pueda editar las publicaciones tanto de proyectos como de empleos
 LISTO ---- Documento txt de los requirements de los paquetes de python
-14. Emplear gitignore y secret.json
+LISTO ---- Emplear gitignore y secret.json
 
+
+15. Guardar los cambios hechos en python anywhere en prod.py y base.py, el enlace al secret.json
 15. Subir la información correcta de los proyectos ejecutados
+15. Hacer pruebas de todo en python anywhere....
 15. Averiguar sobre traslado de dominios para la pagina web
 
+16. DEBUG True para que no aparezcan las ayudas de 404
 
-17. Hacer pruebas de todo....
 16. Elaborar los modelos para crear propias encuestas en la pagina
 
 
