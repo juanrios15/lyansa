@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %} Agregar imagen a proyecto {% endblock title %}
+
+  {% block content %}
+
+  {% include 'header.html' %}
+  <div class="container col-lg-8">
+      <br>
+    <form action="" method="post" enctype='multipart/form-data'> {% csrf_token %}
+        <div class="row">
+            <div class="form-group pb-1">
+                <h5>Proyecto</h5>
+                {{form.proyecto}}
+            </div>
+            <div class="form-group pb-2">
+                <h6>Seleccione una imagen: </h6>{{form.imagen}}
+            </div>
+        </div>
+
+        <button class="btn btn-dark"> Cargar imagen </button>
+    </form>
+  </div>
+    
+
+
+    {% endblock content %}

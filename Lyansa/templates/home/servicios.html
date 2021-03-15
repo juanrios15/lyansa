@@ -1,0 +1,243 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %}Nuestros Servicios{% endblock title %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+
+
+<div class="container col-9 my-3 rounded" style="background-color: #eee; padding: 0px 50px">
+  <div class="row">
+    <div class="col-12 mt-4 pb-3">
+      <h1>Nuestros Servicios</h1>
+      <br>
+    </div>
+</div>
+    <div class="row my-2">
+        <div class="col-lg-4 text-center">
+            <a href="#m1" class="nombreenlace3"> <p><i class="fas fa-plug fa-8x"></i></p>
+                <br>
+                <h3>{{servicios.0}}</h3></a>
+        </div>
+        <div class="col-lg-4 text-center">
+            <a href="#m2" class="nombreenlace3">
+                <p><i class="fas fa-industry fa-8x"></i></p>
+                <br>
+                <h3>{{servicios.1}}</h3>
+            </a>
+            
+        </div>
+        <div class="col-lg-4 text-center">
+            <a href="#m3" class="nombreenlace3">
+                <p><i class="fas fa-hard-hat fa-8x"></i></p>
+                <br>
+                <h3>{{servicios.2}}</h3>
+            </a>
+            
+        </div>
+    </div>
+    <br>
+    <div class="row my-2 text-center" id="m1">
+
+        <h1>{{servicios.0.titulo}}</h1>
+        <br>
+        <p class="my-2">{{servicios.0.resumen|safe}}</p>
+    </div>
+    <br>
+    <div class="row my-2" >
+        <div class="col-12 py-2 py-lg-0 col-lg-4 text-center" >
+            <h4> Mantenimiento predictivo</h4>
+            <hr>
+            <p>Involucra valoraciones que se toman mientras el equipo a inspeccionar está funcionando en condiciones normales de operación.</p>
+        </div>
+        <div class="col-12 py-2 py-lg-0 col-lg-4 text-center">
+            <h4> Mantenimiento preventivo</h4>
+            <hr>
+            <p>Está diseñado para evitar daños en los equipos que puedan repercutir en reparaciones costosas. Involucra trabajos programados en intervalos de tiempo regulares que por lo general implican detener la operación normal del equipo.</p>
+        </div>
+        <div class="col-12 py-2 py-lg-0 col-lg-4 text-center">
+            <h4> Mantenimiento correctivo</h4>
+            <hr>
+            <p>Se ejecuta luego de una falla del equipo o cuando surgen problemas que no se pueden aplazar. El objetivo es restaurar el equipo a su modo de operación normal.</p>
+        </div>
+    </div>
+    <br>
+
+    <div class="row my-2">
+        <div class="col-12 col-xl-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fas fa-arrow-alt-circle-right fa-4x"></i>
+                    </div>
+                    <div class="col-9" style="text-align: justify;">
+                        <p> <strong> Equipos de patio: </strong>  Pruebas de inyección primaria, medidas de aislamiento, factor de potencia, toma de muestras de aceite, resistencias de contactos y devanados, entre otros... </p> 
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fas fa-arrow-alt-circle-right fa-4x"></i>
+                    </div>
+                    <div class="col-9" style="text-align: justify;">
+                        <p><strong> Lineas de transmisión: </strong>  Pruebas de impedancia y parametros de linea, pruebas de paso y contacto, mantenimiento de servidumbre, cimentaciones, conexiones a tierra, entre otros...</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <br>
+            <div class="container">
+                <div class="row pb-3">
+                    <div class="col-3 pb-xl-0">
+                        <i class="fas fa-arrow-alt-circle-right fa-4x"></i>
+                    </div>
+                    
+                    <div class="col-9" style="text-align: justify;">
+                        <p><strong>Sistemas de protección:</strong>  Pruebas a relés de protección y de sobrecorriente, configuración y pruebas end to end, entre otros...</p>   
+                    </div>
+                </div>                 
+            </div>
+        </div>
+        <div class="col-12 col-xl-7">
+            <img src="{% static 'img/servicios1.jpg' %}" class="d-block w-100" style="border-radius: 3%;">
+        </div>
+    </div>
+    <br >
+    <div class="row my-4 text-center" id="m2">
+        <h1>{{servicios.1.titulo}}</h1>
+        <br>
+        <p class="my-2">{{servicios.1.resumen|safe}}</p>
+    </div>
+    <br>
+    <div class="row my-2">
+        <div class="col-lg-8">
+            <img src="{% static 'img/redes1.jpg' %}" class="d-block w-100" style="border-radius: 3%;">
+        </div>
+        <div class="col-lg-4 py-2 text-center text-lg-start">
+            <p class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Administración de proyectos de construcción
+            </p>
+            <p  class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Control de calidad en sitio y en fabrica
+            </p>
+            <p class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Asistencia en la puesta en servicio y durante la operación
+            </p>
+            <p class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Selección de rutas de las líneas de transmisión y distribución
+            </p>
+            <p class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Optimización de la geometría de las torres
+            </p>
+            <p class="py-1">
+                <i class="fas fa-arrow-alt-circle-right fa-lg"></i> 
+                Estudios geotermicos y mitigación del impacto
+            </p>
+            
+        </div>
+    </div>
+    <br >
+    <div class="row my-4 text-center" id="m3">
+        <h1>{{servicios.2.titulo}}</h1>
+        <br>
+        <p class="my-2">{{servicios.2.resumen|safe}}</p>
+    </div>
+    <br>
+    <div class="container col-lg-10  text-center">
+        <img src="{% static 'img/consultoria.jpg' %}" class="d-block w-100" style="border-radius: 3%;">
+
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="container">
+                <h3> Ingeniería conceptual</h3>
+                <ul>
+                    <li>Descripción general de las necesidades.</li>
+                    <li>Lista preliminar de requisitos y necesidades</li>
+                    <li>Diagramas preliminares de planos, redes e instalaciones</li>
+                    <li>Estimación económica de la inversión</li>
+                    <li>Estimación económica del mantenimiento</li>
+
+                </ul>
+            </div>
+            <div class="container">
+                <h3> Ingeniería basica</h3>
+                <ul>
+                    <li>Revisión de las ubicaciones físicas</li>
+                    <li>Revisión de los requerimientos iniciales</li>
+                    <li>Revisión de planos de equipos, estructuras y necesidades</li>
+                    <li>Diagramas de principio preliminares</li>
+                    <li>
+                        Calculos preliminares de:
+                        <ul>
+                            <li>Sistemas eléctricos</li>
+                            <li>Sistemas de iluminación</li>
+                            <li>Sistemas mecánicos</li>
+                            <li>Sistemas hidráulicos</li>
+                        </ul>
+                    </li>
+                    <li>Elaboración de diagramas unifilares</li>
+                    <li>Especificaciones técnicas de equipos y de compra</li>
+
+                </ul>
+            </div>
+            <div class="container">
+                <h3> Ingeniería de detalle</h3>
+                <ul>
+                    <li>Revisión de la ingeniería básica</li>
+                    <li>Planos de disposición de equipos e instrumentos</li>
+                    <li>Calculos definitivos de los sistemas</li>
+                    <li>Especificaciones definitivas de equipos, materiales, cantidades de obra</li>
+                    <li>Creación de documentos base de invitación</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="container">
+                <h3>Interventoría fiscal</h3>
+                <ul>
+                    <li>Supervisión y control de ejecución presupuestal</li>
+                    <li>Supervisión contable y control de costos</li>
+                    <li>Supervisión del equilibrio económico y financiero de proyectos</li>
+                    <li>Verificación, trámite y autorizaciones de pagos y desembolsos</li>
+                    <li>Control de los aspectos legales que enmarcan el proyecto</li>
+                    <li>Revisión de contratos, adiciones, pólizas y seguros</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h3>Interventoría Técnica</h3>
+                <ul>
+                    <li>Análisis de factores y variables relacionadas a riesgo</li>
+                    <li>Protocolos de comunicación</li>
+                    <li>Conciliación y acuerdo común de situaciones no definidas en el contrato</li>
+                    <li>Verificación de los requisitos a cumplir por cada parte</li>
+                    <li>Seguimiento, observación directa, registros, acompañamientos, reuniones y procedimientos</li>
+                    <li>Control de panorama de riesgos y seguridad del proyecto</li>
+                    <li>Plan de contingencia, manejo de no conformidades y mejora continua</li>
+                    <li>Acuerdo de criterios y elementos para recibir la obra por el cliente, de acuerdo con lo contratado</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    
+
+
+
+</div>
+
+{% endblock content %}

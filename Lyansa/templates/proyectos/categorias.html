@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %} Categoria: {{dpto}} {% endblock title %}
+
+  {% block content %}
+
+  {% include 'header.html' %}
+
+<div class="container col-9 my-3" style="background-color: #eee; border-radius: 1%; padding: 0px 50px">
+  <div class="row">
+    <div class="col-6 mt-4">
+      <h1> Categoria: {{dpto}} </h1>
+      <h1>Proyectos</h1>
+    </div>
+    {% if user.username %}
+    <div class="col-6 mt-4 text-end">
+
+      <a type="button" class="btn btn-dark" href="{% url 'proyecto_app:crear' %}">Agregar un nuevo proyecto</a>
+      <a type="button" class="btn btn-secondary" href="{% url 'proyecto_app:agregar_foto' %}">Agregar imagen a galeria</a>
+
+    </div>
+
+    {% endif %}
+  </div>
+  {% include 'proyectos/bucle.html' %}
+
+  {% include 'paginacion.html' %}
+</div>
+{% endblock content %}
+
+
+  
+  
+
+
+  

@@ -1,0 +1,57 @@
+{% for em in empleo %}
+
+<div class="col-lg-6 mt-2 pb-2 px-4">
+
+    <div class="row">
+        <div class="col-lg-12 ">
+
+            <p><a class="nombreenlace" href="#">{{em.titulo}}</a></p>
+            <span class="date">{{em.created_at}} | {{em.user}}</span>
+
+            <p>
+                {% for categoria in em.Categories.all %}
+                <a href="{% url 'empleo_app:empleocategoria' categoria.nombre %}" style="color: #555555;">{{categoria}}</a>
+                {% endfor %}
+            </p>
+            {% if em.proyecto %}
+            <p>
+                <strong>Proyecto:</strong>  {{em.proyecto}}
+            </p>
+            {% endif %}
+            
+            {% if em.ubicacion %}
+            <p>
+                <strong>Ubicación:</strong>  {{em.ubicacion}}
+            </p>
+            {% endif %}
+            {% if em.duracion %}
+            <p>
+                <strong>Duración:</strong> {{em.duracion}}
+            </p>
+            {% endif %}
+            {% if em.salario %}
+            <p>
+                <strong>Salario:</strong> {{em.salario}}
+            </p>
+            {% endif %}
+            {% if em.resumen %}
+            <p>
+                <strong>Detalle: </strong>  <div style="text-align: justify;">{{em.resumen|safe}}</div> 
+            </p>
+            {% endif %}
+
+            
+
+
+            <a type="button" class="btn btn-dark mt-2" href="{% url 'home:formulario2' em.titulo %}"> Aplicar</a>
+            {% if user.username %}
+            <a type="button" class="btn btn-warning mt-2" href="{% url 'empleo_app:editarempleo' em.id %}"> Editar</a>
+            {% endif %}
+
+
+        </div>
+    </div>
+
+</div>
+
+{% endfor %}

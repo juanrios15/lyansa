@@ -1,0 +1,21 @@
+<footer class="footer mt-auto">
+        <nav class="navbar navbar-expand-lg bg-secondary w-100">
+            <div class="container d-flex justify-content-start">
+                
+                    <a class="nav-item nav-link text-dark" href="{% url 'empleo_app:empleo' %}">Empleo</a>
+                    <a class="nav-item nav-link text-dark" href="{% url 'home:infolegal' %}">Info. Legal</a>
+                    <a class="nav-item nav-link text-dark" href="{% url 'home:filosofia' %}">Filosofía</a>
+                    <a class="nav-item nav-link text-dark" href="{% url 'home:politicas' %}">Políticas de uso</a>
+                
+            </div>
+            
+        </nav>
+
+        <div class="container-fluid py-2 bg-dark text-white">
+            <div class="container" style="font-size: 13px;">
+                &copy; Todos los derechos reservados | Al navegar aquí usted acepta las condiciones de uso y privacidad de este sitio web - {%now "Y"%}
+            </div>
+            
+        </div>
+
+    </footer>

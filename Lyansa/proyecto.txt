@@ -1,0 +1,77 @@
+
+
+Proximas actividades:
+
+LISTO ---- Editar la pagina de creacion de nuevos proyectos
+LISTO ---- Limitar esa pagina solo a quienes esten loggeados
+LISTO ---- Hacer el footer de todas las paginas
+LISTO ---- Agregar a la pagina principal la seccion de trabaje con nosotros
+LISTO ---- Crear la pagina de lista de ofertas de empleo
+LISTO ---- Elaborar el formulario para contacto
+LISTO ---- Cuando se da clic en aplicar debe enviar al formulario pero ya diligenciado el asunto
+LISTO ---- Crear la pagina para crear una nueva oferta de empleado para usuarios loggeados
+
+LISTO ---- Agregar al ckeditor la opcion de cambiarle el color al texto
+LISTO ---- Agregar los proyectos principales a la pagina de inicio
+LISTO ---- Elaborar la pagina de servicios, crear un modelo para poder modificar los diferentes servicios e incluso agregar más
+LISTO ---- Al darle clic a los iconos iniciales de la pagina de servicio lo lleva a uno a la parte de la pagina del servicio
+LISTO ---- Agregar los servicios principales a la pagina de inicio
+LISTO ---- Elaborar la pagina de contacto con un mapa de ubicación de la oficina principal y el formulario de contacto a la vista
+LISTO ---- Imagenes de las certificaciones ISO que tiene Lyansa al final de la pagina
+LISTO ---- Subir el proyecto a github
+LISTO ---- Agregar el modelo de galeria de imagenes donde se van a subir todas las fotos del proyecto
+
+LISTO ----  Hacer la pagina de filosofia organizacional y poner enlaces con imagenes a esa pagina desde la pagina principal
+LISTO ---- Las imagenes de los proyectos en la pagina de inicio deben enlazar al proyecto tambien
+LISTO ---- Mejorar el footer 
+LISTO ---- Crear el navbar del footer con los 4 enlaces a Empleo, Info. Legal, filosofia y Politicas de Uso
+LISTO ---- Falta agregar info legal y politicas de uso
+LISTO ---- Que el usuario loggeado pueda editar las publicaciones tanto de proyectos como de empleos
+LISTO ---- Documento txt de los requirements de los paquetes de python
+14. Emplear gitignore y secret.json
+
+15. Subir la información correcta de los proyectos ejecutados
+15. Averiguar sobre traslado de dominios para la pagina web
+
+
+17. Hacer pruebas de todo....
+16. Elaborar los modelos para crear propias encuestas en la pagina
+
+
+Frontend:
+
+LISTO ---- Agregar iconos para el login y registro
+LISTO ----  Icono de lyansa
+LISTO ----  Agregar el enlace con el icono de linkedin
+LISTO ---- Al filtrar por categorias, no se ve igual que en la pagina principal de proyectos
+LISTO ---- Un enlace y pequeña muestra de los principales proyectos en la pagina principal
+
+LISTO ---- El boton de login y registro en vista para el celular se ve junto REVISAR TODO EN MOVIL Y EN TABLET
+LISTO ---- La galeria de fotos en el detalle del proyecto debe verse de fondo dark
+LISTO ---- Enlaces de filosofia organizacional. Crear la pagina de filosofia organizacional y ver como hacer enlaces a especificos puntos de una URL
+LISTO ---- Mejorar la visualizacion de los errores al diligenciar formularios
+LISTO ---- El formulario de registro tiene un diseño muy simple
+LISTO ---- Bienvenido(a) Nombre y apellido
+LISTO ---- Revisar todas las paginas, vista en celular, tablet, largo y extralargo
+LISTO ---- En la lista de proyectos acomodar mejor verticalmente la visualizacion de la parte a la derecha de la foto
+LISTO ---- El trabaje con nosotros no esta centrado 
+
+
+1. En el menu de opciones, la opcion actual debe aparecer (brillar) como activa (JAVASCRIPT)
+
+Backend:
+LISTO ---- Eliminar el modelo de Pagina ya que no es necesario
+LISTO ---- Modelo de ofertas de empleo
+LISTO ---- En la pagina de proyectos, para los usuarios que han ingresado les aparezca un boton de crear nuevo proyecto.
+LISTO ---- Elaborar el formulario para enviar un trabaje con nosostros
+LISTO ---- Configurar un envio de correo electronico para los formularios de trabaje con nosotros
+LISTO ---- En cada uno de los proyectos un boton para editar el contenido igualmente para las ofertas de empleo
+LISTO ---- 4. Manejar los permisos de ingreso en cada URL
+LISTO ---- Agregar el validators para password1 y password2 en el registro de usuarios
+LISTO ---- Al realizar el login y registro de forma incorrecta deberia mostrar un mensaje avisando que la contraseña o usuario no coinciden
+
+1. Cambiar contraseña -- sacarlo de myblog
+2. Agregar google analytics al proyecto
+
+2. Ha olvidado la contraseña? -- enviar un correo con el enlace 
+

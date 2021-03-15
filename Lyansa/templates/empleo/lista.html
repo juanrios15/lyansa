@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %}Ofertas de empleo{% endblock title %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-primary" role="alert" style="margin: 0;">
+  {{message}}
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="container col-10 my-3 rounded" style="background-color: #eee;padding: 0px 30px">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-6 mt-4">
+            <h1>Ofertas de empleo</h1>
+        </div>
+        {% if user.username %}
+        <div class="col-12 col-sm-4 col-md-6 mt-3 text-md-end">
+
+            <a type="button" class="btn btn-dark" href="{% url 'empleo_app:crearempleo' %}">Agregar nueva oferta de empleo</a>
+
+
+        </div>
+
+        {% endif %}
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            {% include 'empleo/bucle.html' %}
+        </div>
+
+    </div>
+
+    {% include 'paginacion.html' %}
+
+
+</div>
+
+
+
+
+{% endblock content %}

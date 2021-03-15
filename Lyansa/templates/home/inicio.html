@@ -1,0 +1,230 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %}Pagina inicio{% endblock title %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success" role="alert" style="margin: 0;">
+  {{message}}
+</div>
+{% endfor %}
+{% endif %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/amanecer.jpg' %}" class="d-block w-100">
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+<div class="container-fluid bg-dark text-white py-1">
+  <div class="container">
+    <p>Somos líderes en soluciones integradas y planificadas en ingeniería eléctrica. Nuestro propósito es ayudar a
+      nuestros clientes a desarrollar proyectos energéticos y mejorar la confiablidad de sus sistemas de potencia.</p>
+  </div>
+
+</div>
+
+
+<div class="container-fluid" style="background-color: #ddd;">
+  <br>
+  <div class="container-fluid text-dark py-3 my-2 text-center text-sm-start">
+    <div class="container ">
+        <h1 style="font-size: 50px;"> Nuestros Proyectos</h1>
+    </div>
+  </div>
+  <div class="row mx-3">
+    <div class="col-12 col-xl-7  py-2">
+      <div class="card" style="height: 100%;">
+        <a href="{% url 'proyecto_app:detalle' home.id %}"> <img src="{{home.imagen.url}}" class="card-img-top rounded-top" alt=""></a>
+
+        <div class="card-body bg-dark pt-3 rounded-bottom">
+          <h5 class="card-title text-white">{{home.nombre}}</h5>
+          <p class="card-text mb-3 text-white">{{home.resumen}}</p>
+
+          <a href="{% url 'proyecto_app:detalle' home.id %}" class="btn btn-secondary">Ver proyecto</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-xl-5 ">
+      <div class="row d-flex justify-content-center">
+        {% for entrada in portadas %}
+
+        <div class="col-xl-6 col-lg-5 col-10 col-sm-6 py-2">
+
+          <div class="card" style="height: 100%;">
+            <a href="{% url 'proyecto_app:detalle' entrada.id %}"><img src="{{entrada.imagen.url}}" style="height:210px;" class="card-img-top py-0 rounded-top" alt=""></a>
+            <div class="card-body bg-dark py-2 text-dark rounded-bottom d-flex flex-column">
+              <h5 class="card-title mb-3 text-white ">{{entrada.nombre}}</h5>
+
+              <a href="{% url 'proyecto_app:detalle' entrada.id %}" class="btn btn-secondary mt-auto">Ver proyecto</a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <br>
+
+</div>
+
+
+<div class="container-fluid bg-dark">
+  <br>
+  <div class="container text-white py-3 my-2 text-center text-sm-start">
+
+      <h1 style="font-size: 50px;">Nuestros Servicios</h1>
+
+  </div>
+  <br>
+  
+  <div class="container text-center my-2 col-lg-10">
+    <div class="row d-flex justify-content-center">
+      <div class="col-10 col-md-6 col-lg-4 px-4 pb-3 pb-md-0">
+        <a class="nombreenlace2" href="/servicios#m1">
+          <img src="{{servicios.0.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <br>
+          <h2>{{servicios.0.titulo}}</h2>
+        </a>
+      </div>
+      <div class="col-10 col-md-6 col-lg-4 px-4 pb-3 pb-md-0">
+        <a class="nombreenlace2" href="/servicios#m2">
+          <img src="{{servicios.1.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <br>
+          <h2>{{servicios.1.titulo}}</h2>
+        </a>
+  
+      </div>
+      <div class="col-10 col-md-6 col-lg-4 px-4 ">
+        <a class="nombreenlace2" href="/servicios#m3">
+          <img src="{{servicios.2.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <br>
+          <h2>{{servicios.2.titulo}}</h2>
+      </div>
+      </a>
+  
+    </div>
+  
+  </div>
+  <br>
+</div>
+
+<br>
+
+<div class="container-fluid text-dark py-3 my-2 text-center text-sm-start">
+  <div class="container">
+      <h1 style="font-size: 50px;">Filosofía Organizacional</h1>
+  </div>
+  <br>
+  <div class="container col-lg-8 text-center py-4">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 pb-3">
+      <a class="nombreenlace3" href="{% url 'home:filosofia' %}">
+        <i class="fas fa-seedling fa-7x"></i>
+               
+        <h2>Mision</h2>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3 pb-3">
+      <a class="nombreenlace3" href="{% url 'home:filosofia' %}">
+        <i class="fas fa-globe-americas fa-7x"></i>
+        
+        <h2>Vision</h2>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3 pb-3">
+      <a class="nombreenlace3" href="/filosofia#f1">
+        <i class="fas fa-hands-helping fa-7x"></i>
+        
+        <h2>Valores</h2>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3 pb-3">
+      <a class="nombreenlace3" href="/filosofia#f2">
+        <i class="fas fa-balance-scale fa-7x"></i>
+        
+        <h2>Políticas</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div class="container-fluid text-dark py-3 my-2 text-center text-sm-start">
+  <div class="container">
+      <h1 style="font-size: 50px;">Certificaciones</h1>
+  </div>
+  <br>
+  <div class="container col-lg-8 text-center py-4">
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <img src="{% static 'img/9001.png' %}" alt="" style="height: 200px;">
+        <br>
+        <br>
+        <h6>SC-CER650496</h6>
+      </div>
+      <div class="col-lg-3 col-6">
+        <img src="{% static 'img/14001.png' %}" alt="" style="height: 200px">
+        <br>
+        <br>
+        
+        <h6>SA-CER650499</h6>
+      </div>
+      <div class="col-lg-3 col-6">
+        <img src="{% static 'img/18001.png' %}" alt="" style="height: 200px">
+        <br>
+        <br>
+        <h6>OS-CER650503</h6>
+      </div>
+      <div class="col-lg-3 col-6">
+        <img src="{% static 'img/IQNet-df.png' %}" alt="" style="height: 200px">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="container-fluid py-2 py-md-3" style="background-color: #ddd;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col sm-12 col-lg-5 text-center text-lg-start">
+        <h2>Trabaje con nosotros</h2>
+      </div>
+      
+      <div class="col-12 col-lg-7 py-3 py-md-0 text-center text-lg-end d-flex align-items-center justify-content-center justify-content-lg-end">
+
+          <a class="btn btn-dark me-2" style="font-size: 18px;" href="{% url 'empleo_app:empleo' %}"> <i
+              class="fas fa-user-tie fa-sm" style="padding-right: 10px;"></i> Ofertas de empleo </a>
+          <a class="btn btn-dark" style="font-size: 18px;" href="{% url 'home:formulario' %}"> <i
+              class="far fa-address-card fa-sm" style="padding-right: 10px;"></i> Formulario de contacto </a>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+  
+
+
+</div>
+
+
+{% endblock content %}

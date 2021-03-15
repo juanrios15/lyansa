@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %}Proyectos{% endblock title %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-primary" role="alert" style="margin: 0;">
+  {{message}}
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="container-fluid col-11 col-lg-10 rounded my-3 px-4" style="background-color: #ddd;">
+  <div class="row py-3">
+    <div class="col-12 col-sm-12 col-md-4">
+
+      <h1>Proyectos</h1>
+    </div>
+    {% if user.username %}
+    <div class="col-12 col-sm-12 col-md-8 mt-3 text-md-end">
+
+      <a type="button" class="btn btn-dark mb-2 mb-sm-0" href="{% url 'proyecto_app:crear' %}">Agregar un nuevo proyecto</a>
+      <a type="button" class="btn btn-secondary" href="{% url 'proyecto_app:agregar_foto' %}">Agregar imagen a galeria</a>
+
+    </div>
+
+    {% endif %}
+  </div>
+
+
+
+  {% include 'proyectos/bucle.html' %}
+
+  {% include 'paginacion.html' %}
+
+
+</div>
+
+
+
+{% endblock content %}
