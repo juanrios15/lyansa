@@ -39,8 +39,8 @@
         <br>
         <div class="row d-flex justify-content-center">
           {% for foto in galeria %}
-          <div class="col-10 col-lg-4 mb-3">
-            <img src="{{foto.imagen.url}}" class="d-block w-100 rounded" style="height: 250px"/>
+          <div class="col-10 col-lg-6 mb-3">
+            <img src="{{foto.imagen.url}}" class="d-block w-100 rounded" style="max-height: 400px"/>
           </div>
            
           {% endfor %}
