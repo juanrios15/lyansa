@@ -19,11 +19,12 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/juanrios/lyansa/static'
+
+STATIC_ROOT = '/home/juanrios/lyansa/Lyansa/static/'
+
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/juanrios/lyansa'
-
+MEDIA_ROOT = '/home/juanrios/lyansa/Lyansa/media/'
 
 
 EMAIL_USE_TLS = True

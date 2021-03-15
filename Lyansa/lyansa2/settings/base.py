@@ -13,13 +13,13 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-with open("secret.json") as f:
+with open('/home/juanrios/lyansa/Lyansa/secret.json') as f:
     secret = json.loads(f.read())
 
 def get_secret(secret_name,secrets=secret):
     try:
         return secrets[secret_name]
-    
+
     except:
         msg="La variable %s no existe" % secret_name
         return ImproperlyConfigured(msg)
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Apps.proyectos.apps.ProyectosConfig',
     'Apps.empleo.apps.EmpleoConfig',
     'ckeditor'
-    
+
 ]
 
 MIDDLEWARE = [
