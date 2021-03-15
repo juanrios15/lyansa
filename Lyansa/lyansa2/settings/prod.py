@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['juanrios.pythonanywhere.com']
 
@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['juanrios.pythonanywhere.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / get_secret('DB_NAME'),
     }
 }
 
@@ -19,14 +19,19 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/juanrios/lyansa/static'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+
+]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/juanrios/lyansa'
-
 
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER =  'juankrios15@gmail.com'
-EMAIL_HOST_PASSWORD = 'z3r4tul89'
+EMAIL_HOST_USER =  get_secret('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
+
+
+
