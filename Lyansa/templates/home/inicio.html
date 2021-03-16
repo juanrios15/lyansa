@@ -19,7 +19,7 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'img/amanecer.jpg' %}" class="d-block w-100">
+      <img src="{% static 'img/amanecer.jpg' %}" class="d-block w-100" style="min-height:250px;">
 
     </div>
 
@@ -62,7 +62,7 @@
       <div class="row d-flex justify-content-center">
         {% for entrada in portadas %}
 
-        <div class="col-xl-6 col-lg-5 col-10 col-sm-6 py-2">
+        <div class="col-xl-6 col-lg-5 col-12 col-sm-6 py-2">
 
           <div class="card" style="height: 100%;">
             <a href="{% url 'proyecto_app:detalle' entrada.id %}"><img src="{{entrada.imagen.url}}" style="height:210px;" class="card-img-top py-0 rounded-top" alt=""></a>
@@ -92,26 +92,26 @@
   </div>
   <br>
   
-  <div class="container text-center my-2 col-lg-10">
+  <div class="container text-center my-2 col-12 col-lg-10">
     <div class="row d-flex justify-content-center">
-      <div class="col-10 col-md-6 col-lg-4 px-4 pb-3 pb-md-0">
+      <div class="col-12 col-sm-10 col-md-6 col-xl-4 px-sm-4 pb-sm-3 pb-md-0">
         <a class="nombreenlace2" href="/servicios#m1">
-          <img src="{{servicios.0.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <img src="{{servicios.0.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height: 350px">
           <br>
           <h2>{{servicios.0.titulo}}</h2>
         </a>
       </div>
-      <div class="col-10 col-md-6 col-lg-4 px-4 pb-3 pb-md-0">
+      <div class="col-12 col-sm-10 col-md-6 col-xl-4 px-sm-4 pb-sm-3 pb-md-0">
         <a class="nombreenlace2" href="/servicios#m2">
-          <img src="{{servicios.1.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <img src="{{servicios.1.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height: 350px">
           <br>
           <h2>{{servicios.1.titulo}}</h2>
         </a>
   
       </div>
-      <div class="col-10 col-md-6 col-lg-4 px-4 ">
+      <div class="col-12 col-sm-10 col-md-6 col-xl-4 px-sm-4 ">
         <a class="nombreenlace2" href="/servicios#m3">
-          <img src="{{servicios.2.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height:350px;">
+          <img src="{{servicios.2.imagen.url}}" class="d-block w-100" alt="" style="border-radius: 50%; height: 350px">
           <br>
           <h2>{{servicios.2.titulo}}</h2>
       </div>
@@ -170,7 +170,7 @@
   </div>
   <br>
   <div class="container col-lg-8 text-center py-4">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class="col-lg-3 col-6">
         <img src="{% static 'img/9001.png' %}" alt="" style="height: 200px;">
         <br>
@@ -189,9 +189,6 @@
         <br>
         <br>
         <h6>OS-CER650503</h6>
-      </div>
-      <div class="col-lg-3 col-6">
-        <img src="{% static 'img/IQNet-df.png' %}" alt="" style="height: 200px">
       </div>
     </div>
   </div>
