@@ -44,7 +44,7 @@
 
 
             <a type="button" class="btn btn-dark mt-2" href="{% url 'home:formulario2' em.titulo %}"> Aplicar</a>
-            {% if user.username %}
+            {% if user.is_staff %}
             <a type="button" class="btn btn-warning mt-2" href="{% url 'empleo_app:editarempleo' em.id %}"> Editar</a>
             {% endif %}
 

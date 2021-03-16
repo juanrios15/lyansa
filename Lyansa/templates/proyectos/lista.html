@@ -21,7 +21,7 @@
 
       <h1>Proyectos</h1>
     </div>
-    {% if user.username %}
+    {% if user.is_staff %}
     <div class="col-12 col-sm-12 col-md-8 mt-3 text-md-end">
 
       <a type="button" class="btn btn-dark mb-2 mb-sm-0" href="{% url 'proyecto_app:crear' %}">Agregar un nuevo proyecto</a>

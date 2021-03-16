@@ -21,7 +21,7 @@
             <div class="col-12 col-sm-8 col-md-6 mt-4">
                 <h1>Ofertas de empleo</h1>
             </div>
-            {% if user.username %}
+            {% if user.is_staff %}
             <div class="col-12 col-sm-4 col-md-6 mt-3 text-md-end">
     
                 <a type="button" class="btn btn-dark" href="{% url 'empleo_app:crearempleo' %}">Agregar nueva oferta de empleo</a>
