@@ -25,7 +25,7 @@ class VistaxCategoria(ListView):
     
     def get_queryset(self):
         categoria = self.kwargs['nombre']
-        lista = Proyecto.objects.filter(Categories__nombre=categoria,publico=True).order_by("-created_at")
+        lista = Proyecto.objects.filter(Categories__nombre=categoria,publico=True).order_by("-updated_at")
         return lista
     
     def get_context_data(self, **kwargs):
