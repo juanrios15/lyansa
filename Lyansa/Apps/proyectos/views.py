@@ -14,7 +14,7 @@ class VistaProyectos(ListView):
     
     model = Proyecto
     template_name= "proyectos/lista.html"
-    queryset = Proyecto.objects.filter(publico=True).order_by("-created_at")
+    queryset = Proyecto.objects.filter(publico=True).order_by("-updated_at")
     paginate_by = 4
     context_object_name= "proyectos"
 
