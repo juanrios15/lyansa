@@ -14,7 +14,7 @@ class VistaProyectos(ListView):
     
     model = Proyecto
     template_name= "proyectos/lista.html"
-    queryset = Proyecto.objects.filter(publico=True).order_by("-updated_at")
+    queryset = Proyecto.objects.filter(publico=True).order_by("-created_at")
     paginate_by = 4
     context_object_name= "proyectos"
 
@@ -25,7 +25,7 @@ class VistaxCategoria(ListView):
     
     def get_queryset(self):
         categoria = self.kwargs['nombre']
-        lista = Proyecto.objects.filter(Categories__nombre=categoria,publico=True).order_by("-updated_at")
+        lista = Proyecto.objects.filter(Categories__nombre=categoria,publico=True).order_by("-created_at")
         return lista
     
     def get_context_data(self, **kwargs):
