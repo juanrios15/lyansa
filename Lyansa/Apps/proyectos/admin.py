@@ -6,7 +6,7 @@ class mipanel(admin.ModelAdmin):
     
     readonly_fields = ("user","created_at","updated_at")
     search_fields = ("nombre","resumen","user__username","Categories__nombre")
-    list_filter = ("publico","Categories__nombre")
+    list_filter = ("publico","Categories__nombre",)
     list_display = ('nombre','resumen','created_at','user','publico')
     ordering = ("-created_at",)
     

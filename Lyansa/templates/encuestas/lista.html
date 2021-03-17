@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{% block title %}Proyectos{% endblock title %}
+
+{% block content %}
+
+{% include 'header.html' %}
+<ul>
+{% for en in encuestas %}
+
+    <li>{{en}}</li>
+
+    
+{% endfor %}
+</ul>
+
+{% endblock content %}

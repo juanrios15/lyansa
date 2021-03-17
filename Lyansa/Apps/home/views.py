@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.messages.views import SuccessMessageMixin 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login, logout ###
 from django.urls import reverse_lazy, reverse ###
 from django.contrib import messages ###
@@ -14,10 +15,11 @@ from .forms import RegisterForm, LoginForm, ContactForm ###
 from Apps.proyectos.models import Proyecto
 
 from .models import Servicio
+from Apps.home.forms import UpdatePasswordForm
+from django.contrib.auth.views import PasswordResetView, PasswordResetConfirmView
 
 
 # Create your views here.
-
 
 def enviar_email(self,form):
         asunto = form.cleaned_data['asunto']
@@ -93,6 +95,44 @@ class LogoutUser(SuccessMessageMixin,View):
                 'home:inicio'
             )
         )
+
+class ChangePassword(LoginRequiredMixin,SuccessMessageMixin, FormView):
+    template_name = 'home/cambiarcontrasena.html'
+    form_class = UpdatePasswordForm
+    success_url = reverse_lazy('home:inicio')
+    success_message = "Cambio de contraseña realizada con exito!"
+    
+    def form_valid(self, form):
+        usuario = self.request.user
+        user = authenticate(
+            username=usuario.username,
+            password=form.cleaned_data['password1']
+        )
+
+        if user:
+            new_password = form.cleaned_data['password2']
+            usuario.set_password(new_password)
+            usuario.save()
+
+        logout(self.request)
+        return super(ChangePassword, self).form_valid(form)
+
+class ResetPassword(PasswordResetView):
+    
+    email_template_name = 'home/send_email.html'
+    success_url = reverse_lazy('home:inicio')
+    
+    def form_valid(self, form):
+        messages.success(self.request, "Se ha enviado un correo electronico para restablecer su contraseña")
+        return super().form_valid(form)
+    
+class ResetConfirmPassword(PasswordResetConfirmView):
+    
+    success_url = reverse_lazy('home:inicio')    
+    def form_valid(self, form):
+        messages.success(self.request, "Se ha cambiado correctamente de contraseña, por favor inicie sesión nuevamente")
+        return super().form_valid(form)
+   
 
 class ContactView(SuccessMessageMixin,FormView):
     

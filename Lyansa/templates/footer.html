@@ -6,6 +6,9 @@
                     <a class="nav-item nav-link text-dark" href="{% url 'home:infolegal' %}">Info. Legal</a>
                     <a class="nav-item nav-link text-dark" href="{% url 'home:filosofia' %}">Filosofía</a>
                     <a class="nav-item nav-link text-dark" href="{% url 'home:politicas' %}">Políticas de uso</a>
+                    {% if user.username %}
+                    <a class="nav-item nav-link text-dark" href="{% url 'home:cambiarcontrasena' %}">Cambiar contraseña</a>
+                    {% endif %}
                 
             </div>
             

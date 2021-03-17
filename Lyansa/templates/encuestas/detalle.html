@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} {{object.nombre}} {% endblock title %}
+
+  {% block content %}
+
+
+  {% include 'header.html' %}
+
+{{encuesta}}
+<ul>
+{% for pre in preguntas %}
+    <li>{{pre}}
+    <ul>
+        {% for op in pre.opcion_pregunta.all  %}
+        <li>{{op}} </li>
+        {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+</ul>
+
+    {% endblock content %}

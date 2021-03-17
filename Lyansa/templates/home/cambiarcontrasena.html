@@ -8,12 +8,11 @@
   {% include 'header.html' %}
 
     {% if user.username %}
-    
-    {% else %}
-<div class="container">
+
+    <div class="container">
 
   <div class="login container col-10 col-sm-8 col-md-6 col-lg-4" style="margin-top: 70px;">
-    <div style="background-color: #2e5596; margin-bottom: 10px; color: white; padding: 15px; font-size: 18px">LOGIN DE USUARIO - LYANSA
+    <div style="background-color: #2e5596; margin-bottom: 10px; color: white; padding: 15px; font-size: 18px">CAMBIAR CONTRASEÑA - LYANSA
     </div>
 
     <div class="row justify-content-center mt-3">
@@ -29,16 +28,15 @@
 
         <form action="" method="post"> {%csrf_token%}
           <div class="form-floating">
-            {{form.username}}
-            <label>Nombre de usuario</label>
+            {{form.password1}}
+            <label>Contraseña actual</label>
           </div>
-          <div class="form-floating mt-3">
-            {{form.password}}
-            <label>Contraseña</label>
+          <div class="form-floating my-3">
+            {{form.password2}}
+            <label >Nueva contraseña</label>
           </div>
-          <p><a href="{% url 'home:resetpassword' %}">Ha olvidado su contraseña?</a></p>
-          <br>    
-          <button type="submit" class="btn btn-outline-primary">Ingresar</button>
+
+          <button type="submit" class="btn btn-outline-primary">Actualizar</button>
 
         </form>
       </div>
@@ -47,6 +45,8 @@
   </div>
 
 </div>
+    {% else %}
+
     {% endif %}
   
 
