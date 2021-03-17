@@ -6,7 +6,7 @@
         <div class="col-lg-12">
 
             <p><a class="nombreenlace" href="#">{{em.titulo}}</a></p>
-            <span class="date">{{em.created_at}} | {{em.user}}</span>
+            <span class="date">Publicado el {{em.created_at}} | {{em.user.first_name}} {{em.user.last_name}}</span>
 
             <p>
                 {% for categoria in em.Categories.all %}
