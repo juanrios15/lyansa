@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-with open('/home/juanrios/lyansa/Lyansa/secret.json') as f:
+with open('secret.json') as f:
     secret = json.loads(f.read())
 
 def get_secret(secret_name,secrets=secret):
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Apps.home.apps.HomeConfig',
     'Apps.proyectos.apps.ProyectosConfig',
     'Apps.empleo.apps.EmpleoConfig',
+    
     'ckeditor'
 
 ]
