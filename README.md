@@ -4,6 +4,7 @@
 
 ### Elaborado con Django 3.1
 ### Uso unicamente de Class Based Views
+#### Bootstrap 5. Para diseño responsivo Mobile First.
 
 El proyecto consiste en 3 Apps:
 * Home: Vistas principales del proyecto y vistas para el User de django.
